@@ -1,0 +1,220 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 50vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-blend-mode:screen;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+  }
+  
+  .overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin: 0;
+  }
+  /* Add this to your existing CSS */
+
+/* Animation for color change */
+@keyframes colorChange {
+    0% {
+      color: pink;
+      transition: all ease-in-out;
+      transform: scale(1);
+    }
+    50% {
+      color: rgb(0, 166, 255);
+      transition: all ease-in-out;
+      transform: scale(1.1);
+    }
+    100% {
+      color: pink;
+      transition: all ease-in-out;
+      transform: scale(1);
+    }
+  }
+  
+  .date {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    animation: colorChange 2s infinite; /* Apply the animation */
+  }
+  
+  .date span {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: colorChange 2s infinite; /* Apply the same animation to the span */
+  }
+  
+  
+  .rsvp-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rsvp-button:hover {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+
+  }
+  
+  /* Portrait Section */
+  .portraits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f5f5f5;
+    flex-wrap: wrap;
+  }
+  
+  .portrait {
+    position: relative;
+    margin: 20px;
+  }
+  
+  .portrait img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid white;
+    transition: all 0.5s ease-in-out;
+    filter: none;
+  }
+  
+  .portrait:hover img {
+    transform: scale(1.1);
+    filter: blur(4px);
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.407);
+    padding: 20px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .portrait:hover .text {
+    opacity: 1;
+  }
+  
+  .text h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  .text p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .text .social-links a {
+    margin: 0 5px;
+  }
+  
+  .text .social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+  }
+  
+  .signature {
+    width: 250px;
+    height: auto;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portrait img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .signature {
+      width: 200px;
+    }
+  }
+  
+/* General styles for the 'Getting Married' section */
+.getting-married {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+    color: #6c757d; /* Soft gray text color */
+    font-family: 'Georgia', serif;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #9ca3af; /* Light gray for subtitle */
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #709fb0; /* Soft blue */
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px; /* Limit width for readability */
+    color: #6c757d; /* Light gray */
+  }
+  
+  .signature-container {
+    text-align: center; /* Center-align the signature */
+    margin-top: 20px;
+  }
+  
+  .signature-image {
+    width: auto; /* Maintain aspect ratio */
+    height: 50px; /* Adjust as needed */
+    max-width: 100%; /* Responsive for smaller screens */
+  }
+  
+  

@@ -1,13 +1,14 @@
 /* General Reset */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-  }
-  
-  /* Hero Section */
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     position: relative;
     height: 50vh;
     background: url('background.jpg') no-repeat center center/cover;
@@ -15,11 +16,11 @@ body, html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-blend-mode:screen;
+    /*background-blend-mode:screen;*/ /* Consider removing this line */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: relative;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
@@ -28,47 +29,52 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(25px);
-  }
-  
-  .title {
+}
+
+.title {
     font-size: 3rem;
     margin: 0;
-  }
-  /* Add this to your existing CSS */
+}
+
+/* Add this to your existing CSS */
 
 /* Animation for color change */
 @keyframes colorChange {
     0% {
-      color: pink;
-      transition: all ease-in-out;
-      transform: scale(1);
+        color: pink;
+        transition: all ease-in-out;
+        transform: scale(1);
     }
+
     50% {
-      color: rgb(0, 166, 255);
-      transition: all ease-in-out;
-      transform: scale(1.1);
+        color: rgb(0, 166, 255);
+        transition: all ease-in-out;
+        transform: scale(1.1);
     }
+
     100% {
-      color: pink;
-      transition: all ease-in-out;
-      transform: scale(1);
+        color: pink;
+        transition: all ease-in-out;
+        transform: scale(1);
     }
-  }
-  
-  .date {
+}
+
+.date {
     font-size: 1.5rem;
     margin: 10px 0;
-    animation: colorChange 2s infinite; /* Apply the animation */
-  }
-  
-  .date span {
+    animation: colorChange 2s infinite;
+    /* Apply the animation */
+}
+
+.date span {
     font-size: 2rem;
     font-weight: bold;
-    animation: colorChange 2s infinite; /* Apply the same animation to the span */
-  }
-  
-  
-  .rsvp-button {
+    animation: colorChange 2s infinite;
+    /* Apply the same animation to the span */
+}
+
+
+.rsvp-button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1rem;
@@ -77,33 +83,35 @@ body, html {
     border: 2px solid white;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .rsvp-button:hover {
+}
+
+.rsvp-button:hover {
     transition: all 0.5s ease-in-out;
     transform: scale(1.1);
     background-color: white;
     color: black;
     border-radius: 25px;
+}
 
-  }
-  
-  /* Portrait Section */
-  .portraits {
+/* Portrait Section */
+.portraits {
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background: #f5f5f5;
+    background: url('background1.jpg') no-repeat center center/cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background1.jpg');
+
     flex-wrap: wrap;
-  }
-  
-  .portrait {
+}
+
+.portrait {
     position: relative;
     margin: 20px;
-  }
-  
-  .portrait img {
+}
+
+.portrait img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -111,14 +119,14 @@ body, html {
     border: 10px solid white;
     transition: all 0.5s ease-in-out;
     filter: none;
-  }
-  
-  .portrait:hover img {
+}
+
+.portrait:hover img {
     transform: scale(1.1);
     filter: blur(4px);
-  }
-  
-  .text {
+}
+
+.text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -130,91 +138,218 @@ body, html {
     border-radius: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-  }
-  
-  .portrait:hover .text {
+}
+
+.portrait:hover .text {
     opacity: 1;
-  }
-  
-  .text h2 {
+}
+
+.text h2 {
     margin: 10px 0;
     font-size: 1.5rem;
-  }
-  
-  .text p {
+}
+
+.text p {
     margin: 0;
     font-size: 1rem;
-  }
-  
-  .text .social-links a {
+}
+
+.text .social-links a {
     margin: 0 5px;
-  }
-  
-  .text .social-links img {
+}
+
+.text .social-links img {
     width: 24px;
     height: 24px;
     filter: invert(1);
-  }
-  
-  .signature {
+}
+
+.signature {
     width: 250px;
     height: auto;
     border: none;
     margin-top: 20px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .portrait img {
-      width: 200px;
-      height: 200px;
+        width: 200px;
+        height: 200px;
     }
-  
+
     .signature {
-      width: 200px;
+        width: 200px;
     }
-  }
-  
+}
+
 /* General styles for the 'Getting Married' section */
 .getting-married {
     text-align: center;
     padding: 50px 20px;
-    background-color: #ffffff; /* White background */
-    color: #6c757d; /* Soft gray text color */
+    background-color: #ffffff;
+    /* White background */
+    color: #6c757d;
+    /* Soft gray text color */
     font-family: 'Georgia', serif;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     font-size: 1.5rem;
     font-weight: normal;
     margin-bottom: 10px;
-    color: #9ca3af; /* Light gray for subtitle */
-  }
-  
-  .main-title {
+    color: #9ca3af;
+    /* Light gray for subtitle */
+}
+
+.main-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin: 10px 0;
-    color: #709fb0; /* Soft blue */
-  }
-  
-  .description {
+    color: #709fb0;
+    /* Soft blue */
+}
+
+.description {
     font-size: 1rem;
     line-height: 1.6;
     margin: 20px auto;
-    max-width: 800px; /* Limit width for readability */
-    color: #6c757d; /* Light gray */
-  }
-  
-  .signature-container {
-    text-align: center; /* Center-align the signature */
+    max-width: 800px;
+    /* Limit width for readability */
+    color: #6c757d;
+    /* Light gray */
+}
+
+.signature-container {
+    text-align: center;
+    /* Center-align the signature */
     margin-top: 20px;
-  }
-  
-  .signature-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 50px; /* Adjust as needed */
-    max-width: 100%; /* Responsive for smaller screens */
-  }
-  
-  
+}
+
+.signature-image {
+    width: auto;
+    /* Maintain aspect ratio */
+    height: 50px;
+    /* Adjust as needed */
+    max-width: 100%;
+    /* Responsive for smaller screens */
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 20px;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateX(100%);
+    /* Off-screen */
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.event img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event.slide-in-left {
+    flex-direction: row-reverse;
+    /* Alternate layout */
+    transform: translateX(-100%);
+    /* Slide in from the left */
+}
+
+.event.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Slide into place */
+    background-image: linear-gradient(to right, #96e8ec, #f7adf3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Save the Date Button */
+#save-the-date-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3d5a80;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+#save-the-date-btn:hover {
+    background-color: #85c6ff;
+    color: black;
+    
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.invitation-image {
+    margin-top: 50vh;
+    object-fit: contain;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+}
+
+.close-btn:hover {
+    color: red;
+}
+.date1{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 2rem;
+}
+.desc{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
